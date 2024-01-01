@@ -13,7 +13,7 @@ $this->title = 'My Yii Application';
 <html lang="en">
 
 <head>
-    <title>MAl</title>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,7 +60,7 @@ $this->title = 'My Yii Application';
 
             <div class="productbox">
                 <div>
-                    <img width="100%" src="<?= Yii::getAlias('@web') . '/' . $ser->category->image ?>" />
+                    <img width="100%" src="<?= Yii::getAlias('@web') . '/' . $ser->image ?>" />
 
                 </div>
                 <div>

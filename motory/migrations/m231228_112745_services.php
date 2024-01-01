@@ -16,6 +16,7 @@ class m231228_112745_services extends Migration
             'id' => $this->primaryKey(),
             'category_id' => $this->integer()->notNull(),
             'name' => $this->string()->notNull(),
+            'image' => $this->string()->notNull(),
             'price' => $this->integer()->notNull(), // Change to integer type
             'warranty' => $this->integer(), // Assuming warranty is an integer, change if needed
         ]);

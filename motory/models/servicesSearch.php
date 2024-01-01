@@ -18,7 +18,7 @@ class servicesSearch extends services
     {
         return [
             [['id', 'category_id', 'warranty'], 'integer'],
-            [['name'], 'safe'],
+            [['name', 'image'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -65,7 +65,8 @@ class servicesSearch extends services
             'warranty' => $this->warranty,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+              ->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
     }

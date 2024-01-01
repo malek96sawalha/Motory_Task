@@ -24,6 +24,27 @@ echo $form->field($model, 'price')->textInput(['maxlength' => true]);
 
 echo $form->field($model, 'warranty')->textInput();
 
+// Image Upload
+echo $form->field($model, 'imageFile')->fileInput(['id' => 'imageFile']);
+
+// Image Preview
+echo '<div class="new-image-preview" style="display:none;">';
+    echo '<p><strong>New Image Preview:</strong></p>';
+    echo Html::img('', ['alt' => 'Image', 'style' => 'width:150px; margin:50px', 'class' => 'img-thumbnail', 'id' =>
+    'showImage']);
+    echo '</div>';
+
+// JavaScript to preview the selected image
+$this->registerJs("
+$('#imageFile').change(function(e) {
+var reader = new FileReader();
+reader.onload = function(e) {
+$('#showImage').attr('src', e.target.result).show();
+}
+reader.readAsDataURL(e.target.files[0]);
+$('.new-image-preview').show();
+});
+");
 
 
 echo Html::submitButton('Create', ['class' => 'btn btn-success']);

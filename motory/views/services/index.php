@@ -38,6 +38,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'price',
         'warranty',
         [
+                  'attribute' => 'image',
+                'format' => 'html',
+                'value' => function ($model) {
+                    return Html::img(Yii::getAlias('@web/' . $model->image), ['alt' => 'Image', 'style' => 'width:50px;']);
+                },
+            ],
+        
+        [
+            
+            
             'class' => ActionColumn::className(),
             'urlCreator' => function ($action, services $model, $key, $index, $column) {
                 return Url::toRoute([$action, 'id' => $model->id]);

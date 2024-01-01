@@ -26,21 +26,26 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
     <?= DetailView::widget([
-    'model' => $model,
-    'attributes' => [
-        'id',
-        [
-            'attribute' => 'category_id',
-            'label' => 'Category',
-            'value' => function ($model) {
-                return $model->category->id . ' - ' . $model->category->name;
-            },
+        'model' => $model,
+        'attributes' => [
+            'id',
+            [
+                'attribute' => 'category_id',
+                'label' => 'Category',
+                'value' => function ($model) {
+                    return $model->category->id . ' - ' . $model->category->name;
+                },
+            ],
+            'name',
+            'price',
+            'warranty',
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function ($model) {
+                    return Html::img(Yii::getAlias('@web/' . $model->image), ['alt' => 'Image', 'style' => 'width:250px;']);
+                },  
+            ], // <-- Missing closing bracket for 'image' attribute
         ],
-        'name',
-        'price',
-        'warranty',
-    ],
-]) ?>
-
-
+    ]) ?>
 </div>
