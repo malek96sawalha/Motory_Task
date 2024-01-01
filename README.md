@@ -1,13 +1,21 @@
+#How to run the task:
+
+1-Create database (motory) in MySQL.
+
+2-Import the sql file (task_motory_db.sql) in the database created
+
+3-In the terminal just run the command php yii serve
+
 # Motory_Task
 
  I have implemented the specified functionalities using the Yii2 framework, ensuring both backend and frontend components are in line with the provided Figma design.
 
- # Backend Development:
+# Backend Development:
 
  Service Management (CRUD):
  I have developed controllers and models to facilitate the management of services, incorporating secure CRUD operations. This includes robust validation and error-handling mechanisms to ensure data integrity and prevent unauthorized access.
 
- Category Management (CRUD):
+Category Management (CRUD):
 For category management, I created controllers, models, and database tables. The implementation ensures a seamless CRUD experience, maintaining the same level of security and data integrity as with services.
 
 
@@ -32,4 +40,5 @@ Entities for new cars, specifications, and related information have been meticul
 
 [Link: https://ksa.motory.com/en/cars-for-sale/jeddah-haraj/toyota/camry/2019/238286/]
 Entities for cars for sale, location information, and other pertinent details have been created. The established relationships, such as the connection between a car and its sale information, ensure a cohesive database schema.
+
 
