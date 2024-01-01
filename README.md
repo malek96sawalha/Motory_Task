@@ -4,7 +4,9 @@
 
 2-Import the sql file (task_motory_db.sql) in the database created
 
-3-In the terminal just run the command php yii serve
+3-Install the composer -> In the terminal run 'composer install' command
+
+4-In the terminal just run the command 'php yii serve'
 
 # Motory_Task
 
